@@ -28,7 +28,7 @@ ApplicationWindow
 
     Label
     {
-        text: qsTr("Hello World 13")
+        text: qsTr("Hello World 15")
         anchors.centerIn: parent
     }
 }
