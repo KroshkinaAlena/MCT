@@ -40,7 +40,7 @@ ApplicationWindow
         y: 157
         width: 243
         height: 222
-        source: 'file:///Projects/App2/AppNew/Images/elephant.png'
+        source: 'file:///Projects/Images/el.png'
     }
 }
 
