@@ -28,8 +28,8 @@ ApplicationWindow
 
     Label
     {
-        text: qsTr("Hello World the problem")
-        anchors.centerIn: parent
+        text: qsTr("Hello World")
+        anchors.centerIn: parentg
     }
 }
 
