@@ -29,7 +29,18 @@ ApplicationWindow
     Label
     {
         text: qsTr("Hello World")
-        anchors.centerIn: parentg
+        anchors.verticalCenterOffset: -162
+        anchors.horizontalCenterOffset: -141
+        anchors.centerIn: parent
+    }
+    Image
+    {
+        id: image1
+        x: 230
+        y: 157
+        width: 243
+        height: 222
+        source: 'file:///Projects/App2/AppNew/Images/elephant.png'
     }
 }
 
