@@ -2,7 +2,8 @@ TEMPLATE = app
 
 QT += qml quick widgets
 
-SOURCES += main.cpp
+SOURCES += main.cpp \
+    ProjectFunctions.cpp
 
 RESOURCES += qml.qrc
 CONFIG+=qml_debug
@@ -13,4 +14,7 @@ QML_IMPORT_PATH =
 
 # Default rules for deployment.
 include(deployment.pri)
+
+HEADERS += \
+    ProjectFunctions.h
 

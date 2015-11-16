@@ -4,12 +4,13 @@ import QtQuick.Controls 1.2
 ApplicationWindow
 {
     visible: true
-    width: 640
-    height: 480
-    title: qsTr("Hello World")
+    width: 1000
+    height: 800
+    title: qsTr("Some Application")
 
     menuBar: MenuBar
     {
+
         Menu
         {
             title: qsTr("File")
@@ -24,23 +25,46 @@ ApplicationWindow
                 onTriggered: Qt.quit();
             }
         }
-    }
+     }
 
-    Label
-    {
-        text: qsTr("Hello World")
-        anchors.verticalCenterOffset: -162
-        anchors.horizontalCenterOffset: -141
-        anchors.centerIn: parent
-    }
-    Image
-    {
-        id: image1
-        x: 230
-        y: 157
-        width: 243
-        height: 222
-        source: 'file:///Projects/Images/el.png'
-    }
+     Rectangle
+     {
+         id: viewFild
+         x: 200
+         y: 50
+         width: parent.width-200; height: parent.height-50;
+         //border.color: "black"
+        // border.width: 3
+         //color: "lightsteelblue"
+         //rotation: 90;
+         gradient: Gradient
+         {
+             GradientStop { position: 0.0; color: "white" }
+             GradientStop { position: 1.0; color: "lightsteelblue" }
+         }
+         Image
+         {
+             id: elephant;
+             x: 273
+             y: 109
+             width: parent.width/2; height: parent.height/2
+             source: 'file:///Projects/Images/el.png'
+         }
+     }
+
+     Rectangle
+     {
+         id: previewFild
+         x: 0
+         y: 0
+         width: 200; height: parent.height;
+         gradient: Gradient
+         {
+             GradientStop { position: 0.0; color: "white" }
+             GradientStop { position: 1.0; color: "blue" }
+         }
+     }
+
+
 }
 
