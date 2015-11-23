@@ -24,6 +24,5 @@ HEADERS  += mainwindow.h \
 FORMS    += mainwindow.ui
 
 DISTFILES += \
-    Qml.qml \
-    re.qml
+    Qml.qml
 CONFIG+=qml_debug
