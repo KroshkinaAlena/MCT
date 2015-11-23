@@ -1,27 +1,15 @@
+#include "mainwindow.h"
 #include <QApplication>
-#include <QQmlApplicationEngine>
+#include "somewidget.h"
 #include <QtGui>
-#include <QtWidgets>
+#include <QPixmap>
+
 
 int main(int argc, char *argv[])
 {
-    QApplication app(argc, argv);
+    QApplication a(argc, argv);
+    MainWindow w;
 
-    QQmlApplicationEngine engine;
-    engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
-
-    /*QScrollArea sa;
-    QWidget* pwgt = new QWidget;
-    QPixmap pix("c:/Projects/Images/el.png");
-    QPalette pal;
-    pal.setBrush(pwgt->backgroundRole(),QBrush(pix));
-    pwgt->setPalette(pal);
-    pwgt->setAutoFillBackground(true);
-    pwgt->setFixedSize(pix.width(),pix.height());
-    sa.setWidget(pwgt);
-    sa.resize(350,150);
-    sa.show();*/
-
-    return app.exec();
+    w.show();
+    return a.exec();
 }
-
