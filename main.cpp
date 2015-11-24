@@ -2,8 +2,6 @@
 #include <QApplication>
 #include "somewidget.h"
 #include <QtGui>
-#include <QPixmap>
-
 
 int main(int argc, char *argv[])
 {
