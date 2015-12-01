@@ -16,10 +16,12 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    somewidget.cpp
+    somewidget.cpp \
+    scaledpixmap.cpp
 
 HEADERS  += mainwindow.h \
-    somewidget.h
+    somewidget.h \
+    scaledpixmap.h
 
 FORMS    += mainwindow.ui
 

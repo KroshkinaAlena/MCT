@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <scaledpixmap.h>
+
 
 namespace Ui {
 class MainWindow;
@@ -14,6 +16,10 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
+
+    void ListOfPictures();
+    void Connections(ScaledPixmap pic);
+    ScaledPixmap func();
 
 public:
     Ui::MainWindow *ui;
