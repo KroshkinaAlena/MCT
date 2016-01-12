@@ -34,12 +34,15 @@ void ScaledPixmap::paintEvent(QPaintEvent *const event)
     {
         QPoint centerPoint(0,0);
 
-        QSize scaledSize = size();
+        int newH = size().height()-10;
+        int newW = size().width()-10;
+        QSize scaledSize = QSize(newW,newH);
+
         QPixmap scaledPixmap;
         if(flag) scaledPixmap = m_pixmap.scaled(scaledSize,Qt::KeepAspectRatio);
         else scaledPixmap = m_pixmap.scaled(m_pixmap.width()*m_value,m_pixmap.height()*m_value,Qt::IgnoreAspectRatio);
-        centerPoint.setX((scaledSize.width() - scaledPixmap.width())/2);
-        centerPoint.setY((scaledSize.height() - scaledPixmap.height())/2);
+        centerPoint.setX((scaledSize.width() - scaledPixmap.width())/2+5);
+        centerPoint.setY((scaledSize.height() - scaledPixmap.height())/2+5);
         painter.drawPixmap(centerPoint, scaledPixmap);
     }
     QLabel::paintEvent(event);

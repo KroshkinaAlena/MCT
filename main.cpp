@@ -1,27 +1,24 @@
 #include "mainwindow.h"
 #include <QApplication>
-#include "somewidget.h"
+#include "qml.h"
 #include "scaledpixmap.h"
 #include <QtGui>
 #include <QHBoxLayout>
 #include <QSpinBox>
 #include <QSlider>
 
+#include <QtSql/QSqlDatabase>
+#include <QDebug>
+#include <QtSql/QtSql>
+
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     MainWindow w;
 
-    /*QPixmap my( "paper.jpg" );
-    ScaledPixmap* l = new ScaledPixmap;
-    l->setScaledPixmap(my);
-    l->show();*/
-
-    ScaledPixmap pic = w.func();
     w.show();
-    w.Connections(pic);
 
-   /* QHBoxLayout *hbox = new QHBoxLayout(0);
+    /*QHBoxLayout *hbox = new QHBoxLayout(0);
     //hbox->setCaption("Enter Your Age");
     hbox->setMargin(6);
     hbox->setSpacing(6);

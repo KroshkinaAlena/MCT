@@ -8,6 +8,7 @@ QT       += core gui
 QT += declarative
 QT += qml quick
 QT += gui
+QT += sql
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = WidgetProject
@@ -16,15 +17,16 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    somewidget.cpp \
-    scaledpixmap.cpp
+    scaledpixmap.cpp \
+    qml.cpp
 
 HEADERS  += mainwindow.h \
-    somewidget.h \
-    scaledpixmap.h
+    scaledpixmap.h \
+    qml.h
 
 FORMS    += mainwindow.ui
 
 DISTFILES += \
-    Qml.qml
+    QML.qml \
+    Qml1.qml
 CONFIG+=qml_debug
